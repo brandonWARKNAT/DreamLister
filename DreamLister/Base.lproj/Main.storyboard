@@ -151,7 +151,7 @@
         <!--Add/Edit-->
         <scene sceneID="RQJ-pq-hPD">
             <objects>
-                <viewController id="R41-Ge-rVQ" customClass="ItemDetailsVCViewController" customModule="DreamLister" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="R41-Ge-rVQ" customClass="ItemDetailsVC" customModule="DreamLister" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ldm-V8-jWL"/>
                         <viewControllerLayoutGuide type="bottom" id="qCG-gE-cKA"/>
@@ -224,6 +224,9 @@
                                 <state key="normal" title="Save Item">
                                     <color key="titleColor" white="0.80289713541666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="savePressed:" destination="R41-Ge-rVQ" eventType="touchUpInside" id="Fjp-rw-plI"/>
+                                </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eLC-fy-HaX">
                                 <rect key="frame" x="16" y="294" width="288" height="216"/>
@@ -262,6 +265,12 @@
                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="detailsField" destination="e6v-Un-JWf" id="eTQ-8R-ZBy"/>
+                        <outlet property="priceField" destination="gjv-ge-yqF" id="0cx-ka-gb5"/>
+                        <outlet property="storePicker" destination="eLC-fy-HaX" id="Yi5-QH-vBr"/>
+                        <outlet property="titleField" destination="r4S-8F-DL0" id="1mP-4w-zPb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YYf-Vl-KcN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
